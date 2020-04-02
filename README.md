@@ -16,7 +16,7 @@ Next step is to get license conclusions for the source files from Fossology. Thi
 
 ### 3. Machine readable OS policy
 
-Next step is to provide a machine readable OS policy. We're currently [working on the format for the policy](https://github.com/doubleopen-project/doubleopen-publications/blob/dev/Proof-Of-Concept/Compliance-Is-Forever/Ideas/Policy_Engine.md).
+Next step is to provide a machine readable OS policy. We're currently [working on the format for the policy](https://github.com/doubleopen-project/policy-engine/blob/master/Policy_Engine.md).
 
 ### 4. Process Files against OS Policy
 
