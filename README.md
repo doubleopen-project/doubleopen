@@ -8,7 +8,7 @@ The process is divided in five steps:
 
 ### 1. Identify source files
 
-First step is to identify the source files that have been built in to the distributable image and get their hash values. We're currently working on this for Yocto in [our fork of Yocto](https://github.com/doubleopen-project/yocto).
+First step is to identify the source files that have been built in to the distributable image and get their hash values. We're currently working on this for Yocto in [our fork of Yocto](https://github.com/doubleopen-project/yocto). We're utilizing [a script to retrieve the information from the build](https://github.com/doubleopen-project/yocto-hash-list) after it is finished.
 
 ### 2. Get license conclusions
 
