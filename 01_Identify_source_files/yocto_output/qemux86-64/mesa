@@ -1,0 +1,1 @@
+PACKAGES: mesa-src mesa-dbg libegl-mesa libegl-mesa-dev libosmesa libosmesa-dev libgl-mesa libgl-mesa-dev libglapi libglapi-dev libgbm libgbm-dev libgles1-mesa libgles1-mesa-dev libgles2-mesa libgles2-mesa-dev libgles3-mesa libgles3-mesa-dev libxatracker libxatracker-dev mesa-megadriver mesa-vulkan-drivers mesa-staticdev mesa-dev mesa-doc mesa-locale mesa

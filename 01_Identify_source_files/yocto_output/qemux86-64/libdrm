@@ -1,0 +1,1 @@
+PACKAGES: libdrm-src libdrm-dbg libdrm-tests libdrm-drivers libdrm-radeon libdrm-nouveau libdrm-omap libdrm-intel libdrm-exynos libdrm-kms libdrm-freedreno libdrm-amdgpu libdrm-etnaviv libdrm-staticdev libdrm-dev libdrm-doc libdrm-locale libdrm

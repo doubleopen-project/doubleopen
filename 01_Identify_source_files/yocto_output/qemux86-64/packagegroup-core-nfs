@@ -1,0 +1,1 @@
+PACKAGES: packagegroup-core-nfs-src packagegroup-core-nfs-server-dbg packagegroup-core-nfs-client-dbg packagegroup-core-nfs-server packagegroup-core-nfs-server-dev packagegroup-core-nfs-server-ptest packagegroup-core-nfs-client packagegroup-core-nfs-client-dev packagegroup-core-nfs-client-ptest
