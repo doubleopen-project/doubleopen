@@ -59,15 +59,18 @@ ORT fields needed:
     - We currently don't store the root project as a package in SPDX. If we did, we could
       use the name and version from it.
 - scopes
-  - Sub packages of recipes that are not packaged into the final image could be separated
+  - Sub-packages of recipes that are not packaged into the final image could be separated
     from deployed packages here. Can scope only be used for excludes, or can scope be
     taken into account in the policy? Maybe one scope for the Yocto recipes, one scope
-    for sub packages that are deployed with the image and one scope for sub packages that
+    for sub-packages that are deployed with the image and one scope for sub-packages that
     are not deployed with the image?
 
 ### Packages
 
-Create a package to describe all packages built with Yocto.
+Create a package to describe all packages built with Yocto. Maybe include sub-packages that are
+included in the final image (relationship PACKAGE_OF between the sub-package and the image in the
+SPDX) in one scope, those that are not included in the image (no such relationship) in other scope
+and the source packages corresponding to whole recipes in one scope.
 
 #### ORT
 
@@ -124,10 +127,10 @@ ORT fields needed:
   [ProcessedDeclaredLicense](https://github.com/oss-review-toolkit/ort/blob/9d14320d2d5bba0d86cdf68189f6c987acbc9c7e/model/src/main/kotlin/Project.kt#L60-L63)
   only AND expressions are supported here.
 - scopes
-  - Sub packages of recipes that are not packaged into the final image could be separated
+  - Sub-packages of recipes that are not packaged into the final image could be separated
     from deployed packages here. Can scope only be used for excludes, or can scope be
     taken into account in the policy? Maybe one scope for the Yocto recipes, one scope
-    for sub packages that are deployed with the image and one scope for sub packages that
+    for sub-packages that are deployed with the image and one scope for sub-packages that
     are not deployed with the image?
 
 ## Scanner Result
@@ -139,6 +142,10 @@ scanner result.
 
 Save license and copyright information of the packages from the SPDX document as ORT's
 scanner result.
+
+Two types of files need to be saved from SPDX. The files packaged in sub-packages for deployment
+may be binaries or other files. Other files should be added to ORT directly, while for binaries we
+need to add the corresponding source files.
 
 We're saving both the scanner findings from Fossology and the concluded license experssion
 for each file in the SPDX document. For files' licensing info, ORT's [LicenseFinding](https://github.com/oss-review-toolkit/ort/blob/bd88d4bba90c3ed444555fe651954f15d58a3a8b/model/src/main/kotlin/LicenseFinding.kt#L31-L41)
@@ -213,6 +220,12 @@ Options:
   } ]
 }
 ```
+
+## ORT's policy
+
+[Policy logic is written in Kotlin Script.](https://github.com/oss-review-toolkit/ort/blob/master/examples/rules.kts)
+
+[License classifications are written in YAML.](https://github.com/oss-review-toolkit/ort/blob/master/examples/license-classifications.yml)
 
 ## Multiple levels of policy
 
