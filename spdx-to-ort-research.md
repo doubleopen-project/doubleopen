@@ -6,6 +6,10 @@ model. In addition to ORT's own data model ORT includes a model for
 , for which ORT supports deserialization from JSON, so the conversion should be done
 utilizing these, perhaps as a part of the ORT Helper CLI?
 
+## SPDX from Yocto
+
+![SPDX Format](https://raw.githubusercontent.com/doubleopen-project/meta-doubleopen/main/spdx.mmd.svg)
+
 ## Analyzer Result
 
 ### Projects
@@ -209,3 +213,11 @@ Options:
   } ]
 }
 ```
+
+## Multiple levels of policy
+
+TODO
+
+## Reporting
+
+TODO
