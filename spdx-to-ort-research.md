@@ -238,7 +238,7 @@ deemed important, tooling for this could be created or submitted to the upstream
 ## Reporting
 
 ORT has a pretty developed Reporter module, which allows presenting the findings in different
-formats. Not all of the imformation is collected to one file, which could be useful for compliance
+formats. Not all of the information is collected to one file, which could be useful for compliance
 purposes. All the files could be saved separately, or tooling for creating one report including all
 the information could be developed.
 
