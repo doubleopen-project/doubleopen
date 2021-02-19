@@ -223,14 +223,45 @@ Options:
 
 ## ORT's policy
 
+ORT's policy is written as a combination of the policy logic in Kotlin Script and license
+classifications in YAML.
+
 [Policy logic is written in Kotlin Script.](https://github.com/oss-review-toolkit/ort/blob/master/examples/rules.kts)
 
 [License classifications are written in YAML.](https://github.com/oss-review-toolkit/ort/blob/master/examples/license-classifications.yml)
 
 ## Multiple levels of policy
 
-TODO
+ORT doesn't support multiple policy levels to create the final applied policy. If this feature is
+deemed important, tooling for this could be created or submitted to the upstream project.
 
 ## Reporting
 
-TODO
+ORT has a pretty developed Reporter module, which allows presenting the findings in different
+formats. Not all of the imformation is collected to one file, which could be useful for compliance
+purposes. All the files could be saved separately, or tooling for creating one report including all
+the information could be developed.
+
+## Conclusion
+
+Converting SPDX to ORT's data model to use the Evaluator from ORT would probably shorten our
+development time, but some compromises would have to be made:
+
+1. No separation of scan results and manual conclusions for licenses of individual files. Are both
+   of these necessary for the evaluation step, or is only the "more accurate" information enough,
+   (scan results if no conclusion, conclusion only if one exists).
+2. There doesn't seem to be an easy way to include binary files and relate the source files used to
+   produce them in ORT's data format. The source files of binaries could be added to the package
+   as straight source files, or the binary could be added to ORT with the licenses of the source
+   files added straight to the binary file.
+3. The policy logic file in Kotlin Script is not as human readable as the planned YAML files, but on
+   the other hand they enable very complex rules to be developed.
+4. While supporting many different formats and including a lot of information, the built in
+   reporting functionality in ORT doesn't provide one file with all of the information combined
+   for compliance purposes. If this is deemed necessary, developing such format for ORT's reporter
+   output may be the best approach.
+
+All in all, using ORT's Evaluator and Reporter would probably lead to a complete product faster.
+The biggest compromise seems to be the inclusion of both scanner data and manual conclusions in
+SPDX, which may be complicated to represent in ORT. In total I believe the positives to outweigh
+the negatives.
