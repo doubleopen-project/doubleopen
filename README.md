@@ -1,4 +1,4 @@
-__Please note that while the information and materials in this repository reflect the progress of the project, they may currently be in many respects OUTDATED.__
+⚠️ __Please note that while the information and materials in this repository reflect the progress of the project, they may currently be in many respects OUTDATED.__
 
 # Double Open project
 
