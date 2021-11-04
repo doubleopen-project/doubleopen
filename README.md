@@ -1,3 +1,5 @@
+__Please note that while the information and materials in this repository reflect the progress of the project, they may currently be in many respects OUTDATED.__
+
 # Double Open project
 
 Double Open project is working to create a proof of concept of open source compliance with open tools and open data for use in embedded Linux. In particular, the proof of concept focuses on Yocto. However, the architecture is aimed to be technology independent so that the process of proof of concept could be applied to any development environment.
@@ -18,7 +20,7 @@ Next step is to get license conclusions for the source files from Fossology. Thi
 
 ### 3. Machine readable OS policy
 
-Next step is to provide a machine readable OS policy. We're currently [working on the format for the policy](https://github.com/doubleopen-project/policy-engine/blob/master/Policy_Engine.md).
+Next step is to provide a machine readable OS policy.
 
 ### 4. Process Files against OS Policy
 
